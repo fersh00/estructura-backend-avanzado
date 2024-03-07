@@ -21,3 +21,7 @@ api.listen(8000, () => {
     console.log('API corriendo en puerto 8000');
 });
 
+api.get('/test', (req, res) => {
+    res.send("hi test");
+    console.log("Hi test desde terminal");
+});
