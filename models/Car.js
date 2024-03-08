@@ -14,7 +14,8 @@ const carSchema = new mongoose.Schema({
     color: String,
     type: String,
     carType: String,
-    vin: String
+    vin: String,
+    version: String
 });
 
 //(2)
