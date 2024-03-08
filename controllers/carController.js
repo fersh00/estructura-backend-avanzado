@@ -34,8 +34,20 @@ const getCarById = async (req, res) => {
     res.json(car);
 }
 
+//update
+
+const updateCar = async (req, res) => {
+    const { carId } = req.params;
+    const updatedCar = await Car.updateOne(
+        {
+        _id: carId
+        }, 
+    req.body
+    );
+    res.json(updatedCar);
+};
 
 
 //Exports
 
-export { createCar, getAllCars, getCarById }
+export { createCar, getAllCars, getCarById, updateCar }
