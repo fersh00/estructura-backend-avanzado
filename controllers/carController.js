@@ -47,7 +47,14 @@ const updateCar = async (req, res) => {
     res.json(updatedCar);
 };
 
+//delete
+
+const deleteCar = async (req, res) => {
+  const deletedCar = await Car.findByIdAndDelete(req.params.carId);
+  res.json(deletedCar);
+};
+
 
 //Exports
 
-export { createCar, getAllCars, getCarById, updateCar }
+export { createCar, getAllCars, getCarById, updateCar, deleteCar }
