@@ -1,4 +1,4 @@
-//TODO: crear app con express
+
 
 /**
  * 1. importar express
